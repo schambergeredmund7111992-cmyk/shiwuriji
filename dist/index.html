@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f6f3e9"><meta name="description" content="拾物日记，把饭菜、饮品、书本和每一件喜欢的小物，收进生活手账。">
+  <title>拾物日记 · Little Things</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/jiangcheng-yuanti-200w.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="assets/opening/back.webp" as="image"><link rel="preload" href="assets/opening/front.webp" as="image">
+  <link rel="stylesheet" href="opening.css"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="stickers.css"><link rel="stylesheet" href="typography.css"><link rel="stylesheet" href="backgrounds.css"><link rel="stylesheet" href="catalog.css">
+<script>document.documentElement.classList.add('intro-active');window.__openingWatchdog=setTimeout(function(){if(window.finishOpening)window.finishOpening();else{document.documentElement.classList.remove('intro-active');document.getElementById('opening')?.remove()}},6500);</script>
+</head>
+<body>
+<section id="opening" class="opening" role="dialog" aria-modal="true" aria-label="奶蛙转身开场" data-phase="loading">
+ <button type="button" class="opening-skip">跳过</button>
+ <div class="opening-stage" aria-hidden="true"><div class="opening-turn"><img class="opening-face opening-back" src="assets/opening/back.webp" alt="" decoding="async" fetchpriority="high"><img class="opening-face opening-front" src="assets/opening/front.webp" alt="" decoding="async" fetchpriority="high"></div></div>
+</section>
+<div class="campus-backdrop" aria-hidden="true"><div class="campus-scene"></div><div class="campus-frost"></div></div>
+<svg width="0" height="0" class="glass-definitions" aria-hidden="true"><defs><filter id="campus-glass" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".045 .065" numOctaves="3" seed="23" result="grain"/><feDisplacementMap in="SourceGraphic" in2="grain" scale="12" xChannelSelector="R" yChannelSelector="G"/><feGaussianBlur stdDeviation="3.2"/></filter></defs></svg>
+<svg class="icon-library" xmlns="http://www.w3.org/2000/svg"><defs>
+<symbol id="i-record" viewBox="0 0 24 24"><path d="M5 4h14v17H5zM8 2v4m8-4v4M8 10h8m-8 4h5"/></symbol>
+<symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 4h9l9 9-8 8-10-10z"/><circle cx="8" cy="9" r="1"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 2v6m10-6v6M3 11h18m-13 4h1m5 0h1m-7 3h1"/></symbol>
+<symbol id="i-me" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 9v2m8-2v2m-8 4q4 4 8 0"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.5 5.5c-2.5-2.5-6.5-1-8.5 1.5-2-2.5-6-4-8.5-1.5C-2 11 12 21 12 21s14-10 8.5-15.5Z"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+<symbol id="i-left" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+<symbol id="i-right" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+<symbol id="i-photo" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.5"/><path d="m4 18 5-6 4 4 3-4 5 6"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5Z"/></symbol>
+</defs></svg>
+<header class="site-header">
+  <a href="#records" class="brand" aria-label="拾物日记首页"><span class="brand-name">拾物日记<small>LITTLE THINGS, BIG FEELINGS.</small></span></a>
+  <button class="outline-button header-add" data-action="add"><svg><use href="#i-plus"/></svg> 记录一件小事</button>
+  <div class="campus-branding"><img class="campus-momo" src="assets/momo.png" alt="莫莫熊 · 深圳北理莫斯科大学"><img class="campus-anniversary" src="assets/anniversary.png" alt="深圳北理莫斯科大学十周年，2016–2026"></div>
+</header>
+<main id="main"></main>
+<div class="bottom-wrap"><nav class="bottom-nav" aria-label="主要导航">
+ <button data-view="records"><svg><use href="#i-record"/></svg><span>记录</span></button>
+ <button data-view="labels"><svg><use href="#i-tag"/></svg><span>标签</span></button>
+ <button data-view="calendar"><svg><use href="#i-calendar"/></svg><span>日历</span></button>
+ <button data-view="mine"><svg><use href="#i-me"/></svg><span>我的</span></button>
+</nav><button class="add-fab" data-action="add" aria-label="新增物品记录"><svg><use href="#i-plus"/></svg></button></div>
+<div id="overlay" class="overlay" hidden><section id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="dialog-title" tabindex="-1"></section></div>
+<div id="toast" class="toast" role="status"></div>
+<input id="import-file" type="file" accept="application/json,.json" hidden>
+<script src="backgrounds.js"></script><script src="catalog.js"></script><script src="app.js"></script><script src="opening.js"></script>
+</body></html>

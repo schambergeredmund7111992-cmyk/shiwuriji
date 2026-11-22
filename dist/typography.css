@@ -1,0 +1,16 @@
+@font-face{
+  font-family:'JiangChengRounded';
+  src:url('assets/fonts/jiangcheng-yuanti-200w.woff') format('woff');
+  font-weight:100 900;
+  font-style:normal;
+  font-display:swap;
+}
+:root{
+  --journal-font:'JiangChengRounded',sans-serif;
+  --serif:var(--journal-font);
+  --sans:var(--journal-font);
+}
+html,body,body *,body *::before,body *::after,button,input,select,textarea,option,::placeholder{
+  font-family:var(--journal-font)!important;
+  font-synthesis:none;
+}

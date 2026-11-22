@@ -1,0 +1,36 @@
+[hidden]{display:none!important}
+.sticker-stage{display:flex;align-items:center;justify-content:center;background:#e9e2cf;background-image:radial-gradient(#c6b58f25 .8px,transparent .8px);background-size:12px 12px}
+.photo-wrap.sticker-stage{padding:27px 22px 34px;overflow:visible}
+.photo-wrap .sticker-cutout{width:100%;height:100%;object-fit:contain;filter:drop-shadow(1px 6px 3px #493b2a22);transform:rotate(-5deg);border-radius:0;background:transparent}
+.polaroid:nth-child(3n+2) .sticker-stage{background-color:#e3e5d7}
+.polaroid:nth-child(3n) .sticker-stage{background-color:#eaded4}
+.polaroid:hover .sticker-cutout{transform:rotate(0) scale(1.04)}
+.sticker-pending{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;color:var(--gold);text-align:center;width:100%;height:100%;min-height:24px}
+.sticker-pending small{font-size:10px;color:var(--muted)}
+.receipt-top{min-height:85px;position:relative;padding-bottom:12px;margin-bottom:18px}
+.receipt-kind{display:flex;align-items:flex-start;flex-direction:column;gap:12px}
+.receipt-sticker{display:flex;align-items:center;justify-content:center;width:89px;height:84px;flex-shrink:0;transform:rotate(9deg)}
+.receipt-sticker img{width:100%;height:100%;object-fit:contain;background:none;filter:drop-shadow(1px 3px 2px #493b2a22)}
+.receipt-sticker .sticker-pending small{display:none}
+.day-stickers{display:flex;align-items:center;justify-content:center;position:relative;width:100%;height:calc(100% - 18px);flex:1;min-height:0;padding:3px}
+.day .day-stickers img{height:100%;width:80%;max-height:100%;object-fit:contain;background:none;border:0;border-radius:0;padding:0;margin:0;box-shadow:none;filter:drop-shadow(0 2px 1px #493b2a20);transform:rotate(-9deg)}
+.day .day-stickers img+img{position:absolute;right:0;bottom:0;width:58%;height:80%;transform:rotate(12deg)}
+.day .day-stickers:has(img+img)>img:first-child{margin-right:22%;width:65%;transform:rotate(-13deg)}
+.day .sticker-pending small{display:none}.day .sticker-pending svg{width:16px;height:16px}
+.day-item-sticker{width:64px;height:69px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.day-item .day-item-sticker img{width:100%;height:100%;object-fit:contain;padding:0;background:none;border:0;box-shadow:none;filter:drop-shadow(1px 3px 1px #493b2a20)}
+.detail-sticker{height:300px;width:100%;padding:25px;margin:12px 0 15px;border-radius:8px}
+.detail-sticker img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(1px 6px 3px #493b2a25);transform:rotate(-4deg)}
+.original-photo{font-size:12px;color:var(--muted);margin:12px 0 22px}.original-photo summary{cursor:pointer}.original-photo img{width:100%;max-height:350px;object-fit:contain;margin-top:14px;border-radius:5px}
+.upload-box #photo-preview{width:90px;height:100px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:#e3dcc9;border-radius:6px}
+.upload-box #photo-preview img{width:100%;height:100%;object-fit:contain;padding:7px;background:none;filter:drop-shadow(1px 3px 1px #493b2a20)}
+.cutout-status{font-size:12px;line-height:1.8;color:var(--gold-dark);background:#eee6d4;padding:10px 13px;border-radius:6px}
+.migration-status{position:fixed;right:20px;bottom:110px;max-width:340px;padding:13px 17px;border:1px solid var(--line);border-radius:12px;background:#fffdf5f2;backdrop-filter:blur(10px);z-index:30;box-shadow:0 5px 20px #493b2a15;font-size:12px;line-height:1.8;color:var(--gold-dark);display:flex;align-items:center;gap:15px}
+.migration-status button{border:1px solid var(--gold);border-radius:20px;padding:3px 12px;white-space:nowrap}.source-link{display:block;text-decoration:underline;text-underline-offset:4px;color:var(--gold-dark);margin-top:10px}
+@media(max-width:700px){.photo-wrap.sticker-stage{padding:24px 14px 27px}.receipt-sticker{width:64px;height:70px}.receipt-top{min-height:75px}.receipt-kind .mini-tag{font-size:9px}.receipt-kind{gap:9px}.day-stickers{padding:0}.day .day-stickers img{width:95%;height:100%;max-height:100%}.day .count{font-size:8px;right:3px;bottom:2px}.detail-sticker{height:260px;padding:18px}.migration-status{left:20px;right:20px;bottom:100px;max-width:none}.upload-box{gap:12px}.upload-box strong{font-size:13px}.upload-box small{font-size:10px}.upload-box #photo-preview{width:73px;height:87px}}
+
+@keyframes calendar-sticker-greet{0%,100%{scale:1}45%{scale:1.1}72%{scale:.985}}
+.day-stickers.sticker-arrived img{animation:calendar-sticker-greet .72s cubic-bezier(.22,.7,.3,1) both;transform-origin:center}
+.day:nth-child(3n+1) .day-stickers.sticker-arrived img{animation-delay:.06s}
+.day:nth-child(3n+2) .day-stickers.sticker-arrived img{animation-delay:.12s}
+@media(prefers-reduced-motion:reduce){.day-stickers.sticker-arrived img{animation:none}}

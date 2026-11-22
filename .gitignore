@@ -1,0 +1,9 @@
+outputs/
+preview.jpg
+*.tar.gz
+__pycache__/
+node_modules/
+.vercel/
+.env
+.env.*
+!.env.example

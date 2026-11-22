@@ -1,0 +1,39 @@
+:root{--campus-photo:url('assets/backgrounds/campus-09.jpg');--muted:#74695d;--line:#c3bba775}
+body{background:#e6ecec;isolation:isolate}
+body:before{opacity:.04}
+.glass-definitions{position:absolute;pointer-events:none;overflow:hidden}
+.campus-backdrop{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none;background:#e3e8e5}
+.campus-scene{position:absolute;inset:-24px;background-image:var(--campus-photo);background-position:center;background-size:cover;filter:url('#campus-glass') saturate(.85);transform:scale(1.035)}
+.campus-frost{position:absolute;inset:0;background:linear-gradient(135deg,#fffdf7a6,#f7f6ef85 55%,#fffdf7a6);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+.campus-frost:after{content:'';position:absolute;inset:0;opacity:.18;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.33' numOctaves='3' seed='11' stitchTiles='stitch' result='noise'/%3E%3CfeDiffuseLighting in='noise' surfaceScale='2.8' diffuseConstant='1' lighting-color='%23ffffff'%3E%3CfeDistantLight azimuth='45' elevation='55'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.85'/%3E%3C/svg%3E")}
+.site-header{background:#fffdf526;border-color:#fffdf58c}
+.brand-mark span{background:#f9f8eee8}
+.header-note,.hero p,.page-intro p,.eyebrow{color:#655b4d}
+.toolbar{background:#fffdf560;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid #fffdf5a6;border-radius:12px;padding:16px 18px;box-shadow:0 8px 28px #273f4b06}
+.journal-note{background:#f3eddbc9;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-color:#fff9e1a6}
+.polaroid{background:#fffdf6e8;border-color:#ffffffe0;box-shadow:0 5px 20px #243a4910}
+.card-add{background:#fffdf571;border-color:#fffdf5db;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.profile-card,.calendar,.calendar-stats article,.day-list{background:#fffdf5b8;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-color:#ffffffb8;box-shadow:0 7px 28px #253c4a08}
+.day{background:#f2eee278}.day:hover:not(:disabled),.day.selected{background:#e8ddc4bc}
+.notice{background:#eee7d6b8}
+.bottom-nav{background:#f6f2e3cb;border-color:#ffffffe6;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
+.modal{background:#f8f5edee;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
+.overlay{background:#26394555;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+.footer-note{color:#665c4f}.footer-note:before,.footer-note:after{background:#8c82754d}
+.background-setting{margin-top:-4px}.background-setting>svg{width:20px;height:20px}
+.background-preview{height:112px;border-radius:9px;overflow:hidden;position:relative;margin:18px 0;border:1px solid #fff;isolation:isolate;background:#dce3dd}
+.background-preview:before{content:'';position:absolute;inset:-12px;background-image:var(--preview-photo);background-size:cover;background-position:center 50%;filter:url('#campus-glass') saturate(.85)}
+.background-preview:after{content:'';position:absolute;inset:0;background:#fffdf54a;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.background-preview>span{position:absolute;z-index:1;left:13px;bottom:12px;padding:5px 10px;border-radius:20px;background:#fffdf5c9;font-size:12px;color:#564c3f}
+.background-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.background-choice{border:2px solid transparent;border-radius:10px;background:#fffdf5d6;padding:5px;position:relative;text-align:left;transition:border-color .16s,transform .16s}
+.background-choice:hover{transform:translateY(-2px);border-color:#b28a4875}
+.background-choice.selected{border-color:var(--gold);background:#fff9e8}
+.background-choice img{display:block;width:100%;height:89px;object-fit:cover;border-radius:5px}
+.background-choice>span{display:flex;align-items:center;gap:7px;padding:9px 3px 5px;font-size:12px;white-space:nowrap}
+.background-choice b{font-weight:400;color:var(--gold-dark)}.background-choice small{font-size:9px;margin-left:auto;color:var(--muted)}
+.background-choice i{position:absolute;right:9px;top:9px;display:none;width:22px;height:22px;border-radius:50%;background:var(--gold);color:white;text-align:center;line-height:22px;font-size:13px;font-style:normal}
+.background-choice.selected i{display:block}
+.background-picker-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px dashed var(--line);padding-top:17px;margin-top:20px}
+.background-picker-footer p{font-size:12px;color:var(--muted);margin:0}
+@media(max-width:700px){.toolbar{padding:14px 10px}.search-box{width:112px}.background-choices{gap:8px}.background-choice{padding:3px;border-radius:7px}.background-choice img{height:67px}.background-choice>span{gap:3px;font-size:10px;padding:7px 1px 3px}.background-choice small{font-size:8px}.background-choice i{width:18px;height:18px;font-size:11px;line-height:18px;top:6px;right:6px}.background-preview{height:90px}.background-picker-footer{gap:8px}.background-picker-footer p{font-size:10px}.background-picker-footer .solid-button{padding:11px 15px;font-size:13px}.campus-scene{background-position:center;filter:url('#campus-glass') saturate(.85)}.campus-frost{background:linear-gradient(145deg,#fffdf7b3,#f7f6ef9c 55%,#fffdf7b3)}}

@@ -1,0 +1,1 @@
+{"name":"little-things-journal","version":"2.0.0","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs"},"dependencies":{"@imgly/background-removal":"1.7.0","onnxruntime-web":"1.21.0"},"devDependencies":{"esbuild":"0.25.12"}}
