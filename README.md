@@ -43,7 +43,7 @@
 
 ### Cloudflare Pages
 
-`wrangler.jsonc` 指定静态输出目录 dist。首次部署运行 `npx wrangler login` 完成浏览器授权，然后运行 `npx wrangler pages project create shiwuriji --production-branch main` 和 `npx wrangler pages deploy dist --project-name shiwuriji --branch main`。后续更新只需再次部署 dist。
+`wrangler.jsonc` 指定静态输出目录 dist。站点地址：https://shiwuriji.pages.dev/ 。运行 `npx wrangler login` 完成浏览器授权，然后运行 `npx wrangler pages deploy dist --project-name shiwuriji --branch main` 更新部署。首次创建传统 Pages 项目时使用 `npx wrangler pages project create shiwuriji --production-branch main --force`，以免新版 CLI 将创建操作委派到 Workers；已有项目的后续部署不加 --force。
 
 如果在 Cloudflare 控制台连接 GitHub 仓库，构建命令留空，输出目录填写 dist；所有静态产物已提交。直接上传与 Git 集成是不同的项目创建方式，请按实际采用的方式维护部署。
 
