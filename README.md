@@ -41,6 +41,14 @@
 
 ## 部署
 
+### Cloudflare Pages
+
+`wrangler.jsonc` 指定静态输出目录 dist。首次部署运行 `npx wrangler login` 完成浏览器授权，然后运行 `npx wrangler pages project create shiwuriji --production-branch main` 和 `npx wrangler pages deploy dist --project-name shiwuriji --branch main`。后续更新只需再次部署 dist。
+
+如果在 Cloudflare 控制台连接 GitHub 仓库，构建命令留空，输出目录填写 dist；所有静态产物已提交。直接上传与 Git 集成是不同的项目创建方式，请按实际采用的方式维护部署。
+
+### Vercel（可选）
+
 静态内容位于 dist/，Vercel 配置位于 vercel.json。导入 GitHub 仓库时使用仓库根目录，Framework Preset 选择 Other，Output Directory 为 dist。已提交完整静态产物，无需安装依赖或运行构建即可部署。
 
 修改需要重新打包的源码后，在本地运行 `npm ci` 和 `npm run build`，提交更新后的 dist/。连接 Vercel GitHub 集成后，推送 main 分支即可触发更新。用户记录仍只保存在各自浏览器中。
