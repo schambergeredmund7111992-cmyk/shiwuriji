@@ -1,5 +1,13 @@
 # 校园标识与贴纸素材
 
+## 当前校园示例与背景
+
+当前展示的五条校园记录使用项目作者提供的照片：`dist/assets/campus/candy.jpg`（11 月 22 日科学知识文化节“圣诞树”棉花糖，25 元）、`robots.jpg`（11 月 21 日校史馆机器人）、`cake.jpg`（11 月 20 日十周年蛋糕）、`lunch.png`（11 月 19 日湖滨食堂二楼用餐）、`student.jpg`（11 月 18 日学生代表活动）。对应白边贴纸位于 `dist/assets/stickers/smbu-*.png`，通过本地抠图流程预生成；原照片保留供详情查看。
+
+`dist/assets/backgrounds/campus-01.jpg` 至 `campus-09.jpg` 为作者提供的九张校园照片。03、04 为图书馆，06、09 为主楼；磨砂玻璃质感通过网页样式实现。字体文件 `dist/assets/fonts/jiangcheng-yuanti-200w.woff` 转换自作者提供的江城圆体 200W。
+
+以下学校标识、角色合集及开场原图同样由作者提供，再经抠图、分格或压缩整理。仓库保留的早期通用物品图片用于旧记录兼容，不是当前校园示例；`download_assets.py` 为早期素材脚本，不参与当前站点构建或部署。
+
 ## 新增咕咕嘎嘎和高雅企鹅
 
 使用内置 imagegen 工具的 background-extraction 编辑模式，将用户提供的两张截图各整理为三列四行的透明图集。`scripts/split-more-stickers.ps1` 分格并按比例放入 320px 透明画布，随后经浏览器 Canvas 编码为质量 .88 的透明 WebP。
